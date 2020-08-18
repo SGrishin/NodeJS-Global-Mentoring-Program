@@ -32,8 +32,8 @@ export const editUserValidator = createValidator().body(
 );
 
 export const autoSuggestUsersSchema = Joi.object({
-    loginSubstring: Joi.string(),
-    limit: Joi.number().min(2),
+    loginSubstring: Joi.string().required(),
+    limit: Joi.number().required().min(2),
 });
 
 export const autoSuggestUsersValidator = createValidator().body(
