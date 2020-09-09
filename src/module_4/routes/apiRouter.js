@@ -1,10 +1,12 @@
 import { Router } from 'express';
 import { userRouter } from './userRouter';
 import { groupRouter } from './groupRouter';
+import { userGroupRouter } from './userGroupRouter';
 
 const routes = [
     { url: '/user', router: userRouter },
     { url: '/group', router: groupRouter },
+    { url: '/link', router: userGroupRouter },
 ];
 
 class ApiRouter {

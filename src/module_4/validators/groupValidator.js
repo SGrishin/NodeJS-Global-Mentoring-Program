@@ -18,7 +18,6 @@ export const createGroupValidator = createValidator().body(
 export const editGroupSchema = Joi.object({
     name: Joi.string(),
     permissions: Joi.array(),
-    user_ids: Joi.array(),
 });
 
 export const editGroupValidator = createValidator().body(

@@ -5,6 +5,5 @@ DROP TABLE IF EXISTS groups;
 CREATE TABLE groups (
     id UUID PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-	permissions TEXT[] NOT NULL,
-    user_ids UUID[] NOT NULL default []
+	permissions TEXT[] NOT NULL
 );

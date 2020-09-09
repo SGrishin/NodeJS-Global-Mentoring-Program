@@ -1,70 +1,11 @@
-import Sequelize from 'sequelize';
-
-const Op = Sequelize.Op;
-const sequelize = new Sequelize({
-    dialect: 'postgres',
-    username: 'postgres',
-    password: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    database: 'nodejs',
-});
-
-async function connectToDB() {
-    try {
-        await sequelize.authenticate();
-
-        console.log('Connection has been established successfully.');
-    }
-    catch (error) {
-        console.error('Unable to connect to the database:', error);
-    }
-}
-
-connectToDB();
-
-sequelize.sync()
-    .then((result) => {
-        console.log('sync success');
-    })
-    .catch((error) => {
-        console.log('sync error: ', error);
-    });
-
-const User = sequelize.define('users', {
-        id: {
-            type: Sequelize.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            allowNull: false,
-        },
-        login: {
-            type: Sequelize.CHAR(50),
-            allowNull: false,
-        },
-        password: {
-            type: Sequelize.CHAR(50),
-            allowNull: false,
-        },
-        age: {
-            type: Sequelize.INTEGER,
-            defaultValue: 4,
-            allowNull: false,
-        },
-        is_deleted: {
-            type: Sequelize.BOOLEAN,
-            defaultValue: false,
-            allowNull: false,
-        },
-    },
-    {
-        timestamps: false,
-        tableName: 'users',
-    });
+import { sequelize, Op } from '../db/Sequelize/initSequelize';
+import getUUID from '../../utils/getUUID';
 
 class UserSequelizeModel {
-    constructor(User) {
+    constructor(User, Group, sequelize) {
         this.User = User;
+        this.Group = Group;
+        this.sequelize = sequelize;
     }
 
     async getAllUsers() {
@@ -77,21 +18,11 @@ class UserSequelizeModel {
             return error;
         }
     }
-
-    async createUser(newUserData) {
-        try {
-            const newUser = await this.User.create(newUserData);
     
-            return newUser;
-        }
-        catch (error) {
-            return error;
-        }
-    }
-
     async getUserById(userId) {
         try {
             const user = await this.User.findOne({
+                include: [this.Group],
                 where: {
                     id: userId,
                 }
@@ -100,11 +31,31 @@ class UserSequelizeModel {
             return user;
         }
         catch (error) {
+            console.error(error);
+            return error;
+        }
+    }
+
+    async createUser(newUserData) {
+        const t = await this.sequelize.transaction();
+
+        try {
+            const newUser = await this.User.create({ id: getUUID(), ...newUserData }, { transaction: t });
+
+            await t.commit();
+    
+            return newUser;
+        }
+        catch (error) {
+            await t.rollback();
+
             return error;
         }
     }
 
     async editUserById(userId, { login, password, age, }) {
+        const t = await this.sequelize.transaction();
+
         try {
             const updatedUser = await this.User.update(
                 { login, password, age, },
@@ -113,17 +64,22 @@ class UserSequelizeModel {
                     where: {
                         id: userId
                     }
-                }
+                },
+                { transaction: t }
             );
 
             return updatedUser[1];
         }
         catch (error) {
+            await t.rollback();
+
             return error;
         }
     }
 
     async deleteUserById(userId) {
+        const t = await this.sequelize.transaction();
+
         try {
             const deletedUser = await this.User.update(
                 { is_deleted: true, },
@@ -132,12 +88,15 @@ class UserSequelizeModel {
                     where: {
                         id: userId
                     }
-                }
+                },
+                { transaction: t }
             );
 
             return deletedUser[1];
         }
         catch (error) {
+            await t.rollback();
+            
             return error;
         }
     }
@@ -161,7 +120,7 @@ class UserSequelizeModel {
     }
 }
 
-const userSequelizeModel = new UserSequelizeModel(User);
+const userSequelizeModel = new UserSequelizeModel(sequelize.models.users, sequelize.models.groups, sequelize);
 
 export {
     UserSequelizeModel,

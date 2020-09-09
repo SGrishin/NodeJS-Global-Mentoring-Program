@@ -1,70 +1,18 @@
-import Sequelize from 'sequelize';
+import { sequelize, Op } from '../db/Sequelize/initSequelize';
 import getUUID from '../../utils/getUUID';
 
-const Op = Sequelize.Op;
-const sequelize = new Sequelize({
-    dialect: 'postgres',
-    groupname: 'postgres',
-    password: 'postgres',
-    host: 'localhost',
-    port: 5432,
-    database: 'nodejs',
-});
-
-async function connectToDB() {
-    try {
-        await sequelize.authenticate();
-
-        console.log('Connection has been established successfully.');
-    }
-    catch (error) {
-        console.error('Unable to connect to the database:', error);
-    }
-}
-
-connectToDB();
-
-sequelize.sync()
-    .then((result) => {
-        console.log('sync success');
-    })
-    .catch((error) => {
-        console.log('sync error: ', error);
-    });
-
-const Group = sequelize.define('groups', {
-        id: {
-            type: Sequelize.UUID,
-            primaryKey: true,
-            allowNull: false,
-        },
-        name: {
-            type: Sequelize.STRING,
-            allowNull: false,
-        },
-        permissions: {
-            type: Sequelize.ARRAY(Sequelize.STRING),
-            allowNull: false,
-        },
-        user_ids: {
-            type: Sequelize.ARRAY(Sequelize.UUID),
-            defaultValue: [],  
-            allowNull: false,
-        }
-    },
-    {
-        timestamps: false,
-        tableName: 'groups',
-    });
-
 class GroupSequelizeModel {
-    constructor(Group) {
+    constructor(Group, User, sequelize) {
         this.Group = Group;
+        this.User = User;
+        this.sequelize = sequelize;
     }
 
     async getAllGroups() {
         try {
             const groups = this.Group.findAll();
+
+            console.log('groups: ', groups);
 
             return groups;
         }
@@ -74,12 +22,18 @@ class GroupSequelizeModel {
     }
 
     async createGroup(newGroupData) {
+        const t = await sequelize.transaction();
+
         try {
-            const newGroup = await this.Group.create({ id: getUUID(), ...newGroupData });
+            const newGroup = await this.Group.create({ id: getUUID(), ...newGroupData }, { transaction: t });
+
+            await t.commit();
     
             return newGroup;
         }
         catch (error) {
+            await t.rollback();
+
             return error;
         }
     }
@@ -87,6 +41,7 @@ class GroupSequelizeModel {
     async getGroupById(groupId) {
         try {
             const group = await this.Group.findOne({
+                include: [this.User],
                 where: {
                     id: groupId,
                 }
@@ -100,6 +55,8 @@ class GroupSequelizeModel {
     }
 
     async editGroupById(groupId, { name, permissions, }) {
+        const t = await sequelize.transaction();
+
         try {
             const updatedGroup = await this.Group.update(
                 { name, permissions, },
@@ -108,17 +65,24 @@ class GroupSequelizeModel {
                     where: {
                         id: groupId
                     }
-                }
+                },
+                { transaction: t }
             );
+
+            await t.commit();
 
             return updatedGroup[1];
         }
         catch (error) {
+            await t.rollback();
+
             return error;
         }
     }
 
     async deleteGroupById(groupId) {
+        const t = await sequelize.transaction();
+        
         try {
             const group = await this.Group.findOne({
                 where: {
@@ -126,9 +90,15 @@ class GroupSequelizeModel {
                 }
             });
 
-            return await group.destroy();
+            const result = await group.destroy({ transaction: t });
+
+            await t.commit();
+
+            return result;
         }
         catch (error) {
+            await t.rollback();
+            
             return error;
         }
     }
@@ -152,7 +122,7 @@ class GroupSequelizeModel {
     }
 }
 
-const groupSequelizeModel = new GroupSequelizeModel(Group);
+const groupSequelizeModel = new GroupSequelizeModel(sequelize.models.groups, sequelize.models.users, sequelize);
 
 export {
     GroupSequelizeModel,
