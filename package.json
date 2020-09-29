@@ -9,7 +9,8 @@
     "module_1:task2": "nodemon --exec babel-node ./src/module_1/task2.js",
     "module_2": "nodemon --exec babel-node ./src/module_2/app.js",
     "module_3": "nodemon --exec babel-node ./src/module_3/app.js",
-    "module_4": "nodemon --exec babel-node ./src/module_4/app.js"
+    "module_4": "nodemon --exec babel-node ./src/module_4/app.js",
+    "module_5": "nodemon --exec babel-node ./src/module_5/app.js"
   },
   "repository": {
     "type": "git",
