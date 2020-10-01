@@ -1,48 +1,73 @@
 import { userGroupService } from '../services/userGroupService';
+import { logInfo, logError } from '../log';
 
 class UserGroupController {
     constructor(userGroupService) {
         this.userGroupService = userGroupService;
     }
 
-    getAllUserGroups(req, res, next) {
-        return this.userGroupService.getAllUserGroups()
-            .then((allUserGroups) => res.send(allUserGroups))
-            .catch((error) => console.error(error));
+    async getAllUserGroups(req, res, next) {
+        logInfo('UserGroupController.getAllUserGroups');
+
+        try {
+            const userGroups = await this.userGroupService.getAllUserGroups();
+
+            return res.send(userGroups);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'UserGroupController.getAllUserGroups', })
+        }
     }
 
-    createUserGroup(req, res, next) {
-        return this.userGroupService.createUserGroup(req.body)
-            .then((userGroup) => res.send(userGroup))
-            .catch((error) => console.error(error));
+    async createUserGroup(req, res, next) {
+        logInfo('UserGroupController.createUserGroup', [req.body]);
+
+        try {
+            const userGroup = await this.userGroupService.createUserGroup(req.body);
+
+            return res.send(userGroup);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'UserGroupController.createUserGroup', params: [req.body]})
+        }
     }
 
-    getUserGroupById(req, res, next) {
-        return this.userGroupService.getUserGroupById(req.params.userGroupId)
-            .then((userGroup) => {
-                if (!userGroup) {
-                    return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
-                }
+    async getUserGroupById(req, res, next) {
+        logInfo('UserGroupController.getUserGroupById', [req.params.userGroupId]);
+
+        try {
+            const userGroup = await this.userGroupService.getUserGroupById(req.params.userGroupId);
             
-                res.json(userGroup);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
+            if (!userGroup) {
+                logError('UserGroupController.getUserGroupById', 404, [req.params.userGroupId]);
+
+                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
+            }
+
+            return res.json(userGroup);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'UserGroupController.getUserGroupById', params: [req.params.userGroupId]})
+        }
     }
 
-    deleteUserGroupById(req, res, next) {
-        return this.userGroupService.deleteUserGroupById(req.params.userGroupId)
-            .then((userGroup) => {
-                if (!userGroup) {
-                    return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
-                }
+    async deleteUserGroupById(req, res, next) {
+        logInfo('UserGroupController.deleteUserGroupById', [req.params.userGroupId]);
+
+        try {
+            const userGroup = await this.userGroupService.deleteUserGroupById(req.params.userGroupId);
             
-                res.json(userGroup);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
+            if (!userGroup) {
+                logError('UserGroupController.deleteUserGroupById', 404, [req.params.userGroupId]);
+
+                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
+            }
+
+            return res.json(userGroup);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'UserGroupController.deleteUserGroupById', params: [req.params.userGroupId]})
+        }
     }
 }
 

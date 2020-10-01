@@ -46,15 +46,17 @@ const defineRelations = () => {
     });
 };
 
-sequelize
-    .authenticate()
-    .then(async () => {
-        defineRelations();
+const runSequelize = () => {
+    sequelize
+        .authenticate()
+        .then(async () => {
+            defineRelations();
+    
+            await sequelize.sync({ force: true });     
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+};
 
-        await sequelize.sync({ force: true });     
-    })
-    .catch((error) => {
-        console.error(error);
-    });
-
-module.exports = { sequelize, Op: Sequelize.Op };
+module.exports = { sequelize, Op: Sequelize.Op, runSequelize, };

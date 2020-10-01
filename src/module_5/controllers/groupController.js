@@ -1,70 +1,106 @@
 import { groupService } from '../services/groupService';
+import { logInfo, logError } from '../log';
 
 class GroupController {
     constructor(groupService) {
         this.groupService = groupService;
     }
 
-    getAllGroups(req, res, next) {
-        return this.groupService.getAllGroups()
-            .then((allGroups) => res.send(allGroups))
-            .catch((error) => console.error(error));
+    async getAllGroups(req, res, next) {
+        logInfo('GroupController.getAllGroups');
+
+        try {
+            const groups = await this.groupService.getAllGroups();
+
+            return res.send(groups);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.getAllGroups', })
+        }
     }
 
-    createGroup(req, res, next) {
-        return this.groupService.createGroup(req.body)
-            .then((group) => res.send(group))
-            .catch((error) => console.error(error));
+    async createGroup(req, res, next) {
+        logInfo('GroupController.createGroup', [req.body]);
+
+        try {
+            const group = await this.groupService.createGroup(req.body);
+
+            return res.send(group);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.createGroup', params: [req.body] })
+        }
     }
 
-    getGroupById(req, res, next) {
-        return this.groupService.getGroupById(req.params.groupId)
-            .then((group) => {
-                if (!group) {
-                    return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
-                }
+    async getGroupById(req, res, next) {
+        logInfo('GroupController.getGroupById', [req.params.groupId]);
+
+        try {
+            const group = await this.groupService.getGroupById(req.params.groupId);
             
-                res.json(group);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
+            if (!group) {
+                logError('GroupController.getGroupById', 404, [req.params.userId]);
+
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+            }
+
+            return res.json(group);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.getGroupById', params: [req.params.groupId] })
+        }
     }
 
-    editGroupById(req, res, next) {
-        return this.groupService.editGroupById(req.params.groupId, req.body)
-            .then((group) => {
-                if (!group) {
-                    return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
-                }
+    async editGroupById(req, res, next) {
+        logInfo('GroupController.editGroupById', [req.params.groupId, req.body]);
+
+        try {
+            const group = await this.groupService.editGroupById(req.params.groupId, req.body);
             
-                res.json(group);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
+            if (!group) {
+                logError('GroupController.editGroupById', 404, [req.params.groupId, req.body]);
+
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+            }
+
+            return res.json(group);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.editGroupById', params: [req.params.groupId, req.body] })
+        }
     }
 
-    deleteGroupById(req, res, next) {
-        return this.groupService.deleteGroupById(req.params.groupId)
-            .then((group) => {
-                if (!group) {
-                    return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
-                }
+    async deleteGroupById(req, res, next) {
+        logInfo('GroupController.deleteGroupById', [req.params.groupId]);
+
+        try {
+            const group = await this.groupService.deleteGroupById(req.params.groupId);
             
-                res.json(group);
-            })
-            .catch((error) => {
-                console.error(error);
-            })
+            if (!group) {
+                logError('GroupController.deleteGroupById', 404, [req.params.groupId]);
+
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+            }
+
+            return res.json(group);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.deleteGroupById', params: [req.params.groupId] })
+        }
     }
 
-    autoSuggestGroups(req, res, next) {
-        const { searchText, limit } = req.body;
+    async autoSuggestGroups(req, res, next) {
+        logInfo('GroupController.autoSuggestGroups', [searchText, limit]);
 
-        return this.groupService.autoSuggestGroups(searchText, limit)
-            .then((allGroups) => res.send(allGroups))
-            .catch((error) => console.error(error));
+        try {
+            const { searchText, limit } = req.body;
+            const result = await this.groupService.autoSuggestGroups(searchText, limit);
+
+            return res.json(result);
+        }
+        catch (error) {
+            next({ error: error, code: 500, method: 'GroupController.autoSuggestGroups', params: [searchText, limit] })
+        }
     }
 }
 

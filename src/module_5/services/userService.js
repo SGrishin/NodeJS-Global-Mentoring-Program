@@ -1,38 +1,99 @@
 import { userSequelizeModel } from '../models/UserSequelizeModel';
+import { logInfo, logError } from '../log';
 
 class UserService {
     constructor(userModel) {
         this.userModel = userModel;
     }
 
-    getAllUsers() {
-        return this.userModel.getAllUsers()
-            .then((result) => result);
+    async getAllUsers() {
+        logInfo('UserService.getAllUsers', arguments);
+
+        try {
+            const users = await this.userModel.getAllUserss();
+    
+            return users;
+        }
+        catch (error) {
+            logError('UserService.getAllUsers', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 
-    createUser(newUserData) {
-        return this.userModel.createUser(newUserData)
-            .then((result) => result);
+    async createUser(newUserData) {
+        logInfo('UserService.newUserData', arguments);
+
+        try {
+            const user = await this.userModel.createUser(newUserData);
+
+            return user;
+        }
+        catch(error) {
+            logError('UserService.newUserData', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 
-    getUserById(userId) {
-        return this.userModel.getUserById(userId)
-            .then((result) => result);
+    async getUserById(userId) {
+        logInfo('UserService.getUserById', arguments);
+
+        try {
+            const user = await this.userModel.getUserById(userId);
+
+            return user;
+        }
+        catch(error) {
+            logError('UserService.getUserById', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 
-    editUserById(userId, userUpdates) {
-        return this.userModel.editUserById(userId, userUpdates)
-            .then((result) => result);
+    async editUserById(userId, userUpdates) {
+        logInfo('UserService.editUserById', arguments);
+
+        try {
+            const user = await this.userModel.editUserById(userId, userUpdates);
+
+            return user;
+        }
+        catch(error) {
+            logError('UserService.editUserById', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 
-    deleteUserById(userId) {
-        return this.userModel.deleteUserById(userId)
-            .then((result) => result);
+    async deleteUserById(userId) {
+        logInfo('UserService.deleteUserById', arguments);
+
+        try {
+            const user = await this.userModel.deleteUserById(userId);
+
+            return user;
+        }
+        catch(error) {
+            logError('UserService.deleteUserById', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 
-    autoSuggestUsers(searchText, limit) {
-        return this.userModel.autoSuggestUsers(searchText, limit)
-            .then((result) => result);
+    async autoSuggestUsers(searchText, limit) {
+        logInfo('UserService.autoSuggestUsers', arguments);
+
+        try {
+            const users = await this.userModel.autoSuggestUsers(searchText, limit);
+
+            return users;
+        }
+        catch(error) {
+            logError('UserService.autoSuggestUsers', 500, arguments);
+            
+            throw new Error(error);
+        }
     }
 }
 

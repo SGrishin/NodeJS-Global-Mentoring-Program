@@ -12,8 +12,6 @@ class GroupSequelizeModel {
         try {
             const groups = this.Group.findAll();
 
-            console.log('groups: ', groups);
-
             return groups;
         }
         catch (error) {
@@ -31,7 +29,7 @@ class GroupSequelizeModel {
     
             return newGroup;
         }
-        catch (error) {
+        catch (error) {            
             await t.rollback();
 
             return error;

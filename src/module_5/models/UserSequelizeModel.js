@@ -31,7 +31,6 @@ class UserSequelizeModel {
             return user;
         }
         catch (error) {
-            console.error(error);
             return error;
         }
     }
