@@ -8,14 +8,16 @@ class UserController {
 
     async getAllUsers(req, res, next) {
         logInfo('UserController.getAllUsers');
-
+        
         try {
             const users = await this.userService.getAllUsers();
 
-            return res.send(users);
+            res.send(users);
+            
+            next({ error: { test: true}, code: 500, method: 'UserController.getAllUsers', });
         }
         catch (error) {
-            next({ error: error, code: 500, method: 'UserController.getAllUsers', })
+            next({ error: error, code: 500, method: 'UserController.getAllUsers', });
         }
     }
 

@@ -30,8 +30,8 @@ export default function (sequelize) {
         }
     );
 
-    Group.beforeSync(() => console.log('Before creating groups table'));
-    Group.afterSync(() => console.log('After creating groups table'));
+    Group.beforeSync(() => logger.info('Before creating groups table'));
+    Group.afterSync(() => logger.info('After creating groups table'));
 
     return Group;
 }

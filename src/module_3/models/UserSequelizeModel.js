@@ -74,7 +74,7 @@ class UserSequelizeModel {
             return users;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -85,7 +85,7 @@ class UserSequelizeModel {
             return newUser;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -100,7 +100,7 @@ class UserSequelizeModel {
             return user;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -119,7 +119,7 @@ class UserSequelizeModel {
             return updatedUser[1];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -138,7 +138,7 @@ class UserSequelizeModel {
             return deletedUser[1];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -156,7 +156,7 @@ class UserSequelizeModel {
             return users;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 }

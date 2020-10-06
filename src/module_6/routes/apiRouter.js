@@ -1,9 +1,11 @@
 import { Router } from 'express';
+import { authenticateRouter } from './authenticateRouter';
 import { userRouter } from './userRouter';
 import { groupRouter } from './groupRouter';
 import { userGroupRouter } from './userGroupRouter';
 
 const routes = [
+    { url: '/authenticate', router: authenticateRouter },
     { url: '/user', router: userRouter },
     { url: '/group', router: groupRouter },
     { url: '/link', router: userGroupRouter },

@@ -2,7 +2,7 @@ import express from 'express';
 import { PORT } from './config';
 import { loaders } from './loaders';
 import { runSequelize } from './db/Sequelize/initSequelize';
-import { uncaughtExceptionHandler, unhandledRejectionHandler } from './log';
+import { logger, uncaughtExceptionHandler, unhandledRejectionHandler } from './log';
 
 const startServer = () => {
     const app = express();
@@ -15,7 +15,7 @@ const startServer = () => {
     runSequelize();
 
     app.listen(PORT, () => {
-        console.log(`listening port ${PORT}`);
+        logger.info(`listening port ${PORT}`);
     });
 };
 

@@ -19,8 +19,8 @@ export default function (sequelize) {
         }
     );
 
-    UserGroup.beforeSync(() => console.log('Before creating user_groups table'));
-    UserGroup.afterSync(() => console.log('After creating user_groups table'));
+    UserGroup.beforeSync(() => logger.log({ level: 'info', message: 'Before creating user_groups table' }));
+    UserGroup.afterSync(() => logger.log({ level: 'info', message: 'After creating user_groups table' }));
 
     return UserGroup;
 }

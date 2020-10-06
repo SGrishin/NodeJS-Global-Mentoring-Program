@@ -17,7 +17,7 @@ class GroupSequelizeModel {
             return groups;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -34,7 +34,7 @@ class GroupSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 
@@ -50,7 +50,7 @@ class GroupSequelizeModel {
             return group;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -76,7 +76,7 @@ class GroupSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 
@@ -99,7 +99,7 @@ class GroupSequelizeModel {
         catch (error) {
             await t.rollback();
             
-            return error;
+            throw error;
         }
     }
 
@@ -117,7 +117,7 @@ class GroupSequelizeModel {
             return groups;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 }

@@ -20,7 +20,7 @@ class UserPgModel {
             return query.rows;
         }
         catch (error) {
-            return error;
+            throw error;
         }
         finally {
         }
@@ -40,7 +40,7 @@ class UserPgModel {
             return query.rows[0];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -53,7 +53,7 @@ class UserPgModel {
             return query.rows[0];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -81,7 +81,7 @@ class UserPgModel {
             return newUserQuery.rows[0];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -101,7 +101,7 @@ class UserPgModel {
             return newUserQuery.rows[0];
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -114,7 +114,7 @@ class UserPgModel {
             return query.rows;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 }

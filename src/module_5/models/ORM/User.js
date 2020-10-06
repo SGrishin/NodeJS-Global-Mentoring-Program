@@ -37,8 +37,8 @@ export default function (sequelize) {
         }
     );
 
-    User.beforeSync(() => console.log('Before creating users table'));
-    User.afterSync(() => console.log('After creating users table'));
+    User.beforeSync(() => logger.info('Before creating users table'));
+    User.afterSync(() => logger.info('After creating users table'));
 
     return User;
 }

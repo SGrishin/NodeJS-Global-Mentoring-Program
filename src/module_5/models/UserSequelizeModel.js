@@ -15,7 +15,7 @@ class UserSequelizeModel {
             return users;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
     
@@ -31,7 +31,7 @@ class UserSequelizeModel {
             return user;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -48,7 +48,7 @@ class UserSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 
@@ -72,7 +72,7 @@ class UserSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 
@@ -96,7 +96,7 @@ class UserSequelizeModel {
         catch (error) {
             await t.rollback();
             
-            return error;
+            throw error;
         }
     }
 
@@ -114,7 +114,7 @@ class UserSequelizeModel {
             return users;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 }

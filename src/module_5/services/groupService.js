@@ -17,7 +17,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.getAllGroups', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -32,7 +32,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.createGroup', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -47,7 +47,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.getGroupById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -62,7 +62,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.editGroupById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -77,7 +77,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.deleteGroupById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -92,7 +92,7 @@ class GroupService {
         catch (error) {
             logError('GroupService.autoSuggestGroups', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 }

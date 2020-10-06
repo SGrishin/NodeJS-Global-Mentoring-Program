@@ -10,5 +10,5 @@ export const routerErrorLogger = ({ error, code, params = [] }, res, next) => {
 
     res.status(error.status).json({ status: error.status, code: code, message: error.message, });
 
-    throw new Error(error);
+    throw new Error(error)
 };

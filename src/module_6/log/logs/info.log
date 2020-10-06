@@ -1,1 +1,61 @@
 {"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-01 21:00:13"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 21:55:44"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 21:55:44"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 21:55:44"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 21:55:44"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 21:56:58"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 21:56:58"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 21:56:58"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 21:56:58"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 21:57:00"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 21:57:00"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 21:57:00"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 21:57:00"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 21:57:38"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 21:57:38"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 21:57:38"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 21:57:38"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:00:24"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:00:24"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:00:24"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 22:00:24"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:00:55"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:00:55"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:00:55"}
+{"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 22:00:55"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:01:15"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:03:04"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:03:05"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:03:05"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:03:45"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:03:45"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:03:45"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:04:00"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:04:00"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:04:26"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:04:26"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:04:26"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:04:29"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:04:29"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:04:29"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 22:04:52"}
+{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-06 22:04:52"}
+{"level":"info","message":"UserService.getAllUsers []","timestamp":"2020-10-06 22:04:52"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:13:50"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:13:50"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:15:16"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:15:16"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:16:36"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:16:36"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:16:48"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:16:49"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:16:55"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:16:55"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:17:18"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:17:18"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:17:18"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:17:24"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:17:24"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:17:24"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:17:42"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:18:05"}

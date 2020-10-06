@@ -16,7 +16,7 @@ class UserGroupSequelizeModel {
             return userGroups;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -33,7 +33,7 @@ class UserGroupSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 
@@ -49,7 +49,7 @@ class UserGroupSequelizeModel {
             return userGroup;
         }
         catch (error) {
-            return error;
+            throw error;
         }
     }
 
@@ -72,7 +72,7 @@ class UserGroupSequelizeModel {
         catch (error) {
             await t.rollback();
 
-            return error;
+            throw error;
         }
     }
 }

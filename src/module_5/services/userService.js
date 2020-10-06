@@ -10,14 +10,14 @@ class UserService {
         logInfo('UserService.getAllUsers', arguments);
 
         try {
-            const users = await this.userModel.getAllUserss();
+            const users = await this.userModel.getAllUsers();
     
             return users;
         }
         catch (error) {
             logError('UserService.getAllUsers', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -32,7 +32,7 @@ class UserService {
         catch(error) {
             logError('UserService.newUserData', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -47,7 +47,7 @@ class UserService {
         catch(error) {
             logError('UserService.getUserById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -62,7 +62,7 @@ class UserService {
         catch(error) {
             logError('UserService.editUserById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -77,7 +77,7 @@ class UserService {
         catch(error) {
             logError('UserService.deleteUserById', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 
@@ -92,7 +92,7 @@ class UserService {
         catch(error) {
             logError('UserService.autoSuggestUsers', 500, arguments);
             
-            throw new Error(error);
+            throw error;
         }
     }
 }
