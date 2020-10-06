@@ -2,7 +2,7 @@ import Joi from '@hapi/joi';
 import { createValidator } from 'express-joi-validation';
 
 export const authenticateSchema = Joi.object({
-    login: Joi.string().required().email(),
+    username: Joi.string().required().alphanum(),
     password: Joi.string().required().alphanum(),
 });
 

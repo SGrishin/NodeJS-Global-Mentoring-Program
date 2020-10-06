@@ -41,7 +41,7 @@ class UserGroupController {
             if (!userGroup) {
                 logError('UserGroupController.getUserGroupById', 404, [req.params.userGroupId]);
 
-                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
+                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} was not found.` });
             }
 
             return res.json(userGroup);
@@ -60,7 +60,7 @@ class UserGroupController {
             if (!userGroup) {
                 logError('UserGroupController.deleteUserGroupById', 404, [req.params.userGroupId]);
 
-                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} not found` });
+                return res.status(404).json({ message: `UserGroup with id ${req.params.userGroupId} was not found.` });
             }
 
             return res.json(userGroup);

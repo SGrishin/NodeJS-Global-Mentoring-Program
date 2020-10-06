@@ -59,3 +59,221 @@
 {"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:17:24"}
 {"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:17:42"}
 {"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:18:05"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:40:14"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:40:14"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:40:14"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:40:14"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:40:14"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:40:14"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:40:14"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:40:52"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:40:53"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:40:53"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:40:53"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:40:53"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:40:53"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:40:53"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:44:26"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:44:26"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:44:26"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:44:26"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:44:26"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:44:26"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:44:26"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:44:33"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:44:33"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:44:33"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:44:33"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:44:33"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:44:33"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:44:33"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:44:42"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:44:42"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:44:42"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:44:42"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:44:42"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:44:42"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:44:42"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:44:48"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:44:48"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:44:48"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:44:48"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:44:48"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:44:48"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:44:48"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:44:55"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:44:55"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:44:55"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:44:55"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:44:55"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:44:55"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:44:55"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:45:01"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:45:02"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:45:02"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:45:02"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:45:02"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:45:02"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:45:02"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:45:09"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:45:09"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:45:09"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:45:09"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:45:09"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:45:09"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:45:09"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:45:28"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:45:28"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:45:28"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:45:28"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:45:28"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:45:28"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:45:28"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:45:44"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:45:44"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:45:44"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:45:44"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:45:44"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:45:44"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:45:44"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:49:21"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:49:21"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:49:21"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:49:21"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:49:21"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:49:21"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:49:22"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:51:41"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:51:41"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:51:41"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:51:41"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:51:41"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:51:41"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:51:41"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:53:15"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:53:15"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:53:15"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:53:15"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:53:15"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:53:15"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:53:15"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:53:25"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:53:25"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:53:25"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:53:25"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:53:25"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:53:25"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:53:25"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:53:31"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:53:31"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:53:31"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:53:31"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:53:31"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:53:31"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:53:31"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:54:29"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:54:30"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:54:30"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:54:30"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:54:30"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:54:30"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:54:30"}
+{"level":"info","message":"POST /api/v1/authenticate/login {\"username\":\"admin\",\"password\":\"admin\"}","timestamp":"2020-10-06 22:56:35"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:57:04"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:57:04"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:57:04"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:57:04"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:57:04"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:57:04"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:57:04"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:57:31"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:57:31"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:57:31"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:57:31"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:57:31"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:57:31"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:57:31"}
+{"level":"info","message":"POST /api/v1/authenticate/login {\"username\":\"admin\",\"password\":\"admin\"}","timestamp":"2020-10-06 22:57:36"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 22:58:17"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 22:58:17"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 22:58:17"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 22:58:17"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 22:58:17"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 22:58:17"}
+{"level":"info","message":"POST /api/v1/authenticate/login {\"username\":\"admin\",\"password\":\"admin\"}","timestamp":"2020-10-06 22:58:17"}
+{"level":"info","message":"AuthenticateController.login []","timestamp":"2020-10-06 22:58:17"}
+{"level":"info","message":"AuthenticateService.getAdmin [{\"username\":\"admin\",\"password\":\"admin\"}]","timestamp":"2020-10-06 22:58:17"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 22:58:17"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:00:00"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:00:00"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:00:00"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:00:00"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:00:00"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:00:00"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:00:00"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:00:33"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:00:33"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:00:33"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:00:33"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:00:33"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:00:33"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:00:33"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:00:51"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:00:51"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:00:51"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:00:51"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:00:51"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:00:51"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:00:51"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:01:14"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:01:14"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:01:14"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:01:14"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:01:14"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:01:14"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:01:14"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:01:27"}
+{"level":"error","message":"checkToken 403 No token provided. [\"G\",\"E\",\"T\",\" \",\"/\"]","timestamp":"2020-10-06 23:01:27"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:01:57"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:01:57"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:01:57"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:01:57"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:01:57"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:01:57"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:01:57"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:02:00"}
+{"level":"error","message":"checkToken 403 No token provided. [\"G\",\"E\",\"T\",\" \",\"/\"]","timestamp":"2020-10-06 23:02:00"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:02:57"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:02:57"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:02:57"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:02:57"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:02:57"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:02:57"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:02:57"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:02:59"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:02:59"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:03:55"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:03:55"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:03:55"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:03:55"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:03:55"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:03:55"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:03:55"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:03:57"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:03:59"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:04:29"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:04:29"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:04:29"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:04:29"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:04:29"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:04:29"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:04:29"}
+{"message":"listening port 3000","level":"info","timestamp":"2020-10-06 23:04:34"}
+{"message":"Before creating users table","level":"info","timestamp":"2020-10-06 23:04:34"}
+{"message":"After creating users table","level":"info","timestamp":"2020-10-06 23:04:34"}
+{"message":"Before creating groups table","level":"info","timestamp":"2020-10-06 23:04:34"}
+{"message":"After creating groups table","level":"info","timestamp":"2020-10-06 23:04:34"}
+{"level":"info","message":"Before creating user_groups table","timestamp":"2020-10-06 23:04:34"}
+{"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:04:34"}
+{"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:04:34"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /api/v1/user\"]","timestamp":"2020-10-06 23:04:34"}

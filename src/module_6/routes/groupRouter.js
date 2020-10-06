@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { groupController } from '../controllers/groupController';
 import { createGroupValidator, editGroupValidator, autoSuggestGroupsValidator } from '../validators/groupValidator';
+import { checkToken } from '../token';
 
 class GroupRouter {
     constructor(router, groupController) {
@@ -16,15 +17,15 @@ class GroupRouter {
 
     setupRouter() {
         this.router.route('/')
-            .get(groupController.getAllGroups.bind(this.groupController));
+            .get(checkToken, groupController.getAllGroups.bind(this.groupController));
         this.router.route('/create')
-            .post(createGroupValidator, groupController.createGroup.bind(this.groupController));
+            .post(checkToken, createGroupValidator, groupController.createGroup.bind(this.groupController));
         this.router.route('/:groupId')
-            .get(groupController.getGroupById.bind(this.groupController))
-            .put(editGroupValidator, groupController.editGroupById.bind(this.groupController))
-            .delete(groupController.deleteGroupById.bind(this.groupController));
+            .get(checkToken, groupController.getGroupById.bind(this.groupController))
+            .put(checkToken, editGroupValidator, groupController.editGroupById.bind(this.groupController))
+            .delete(checkToken, groupController.deleteGroupById.bind(this.groupController));
         this.router.route('/auto-suggest')
-            .post(autoSuggestGroupsValidator, groupController.autoSuggestGroups.bind(this.groupController));
+            .post(checkToken, autoSuggestGroupsValidator, groupController.autoSuggestGroups.bind(this.groupController));
     }
 }
 

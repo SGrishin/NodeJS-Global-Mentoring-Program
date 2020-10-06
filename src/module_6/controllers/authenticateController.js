@@ -1,5 +1,7 @@
+import jwt from 'jsonwebtoken';
 import { authenticateService } from '../services/authenticateService';
 import { logInfo } from '../log';
+import { SECRET, TOKEN_EXPIRATION_TIME, } from '../config';
 
 class AuthenticateController {
     constructor(authenticateService) {
@@ -10,9 +12,19 @@ class AuthenticateController {
         logInfo('AuthenticateController.login');
 
         try {
-            const token = await this.authenticateService.login(req.body);
+            const admin = await this.authenticateService.getAdmin(req.body);
 
-            return res.status(200).json(token);
+            if (!admin) {
+                logError('AuthenticateController.login', 404, [req.body.username, req.body.password]);
+
+                return res.status(404).json({ message: `User was not found.` });
+            }
+
+            const token = jwt.sign({ sub: admin.id }, SECRET, {
+                expiresIn: TOKEN_EXPIRATION_TIME
+            });
+
+            return res.send(token);
         }
         catch (error) {
             next({ error: error, code: 500, method: 'AuthenticateController.login', })

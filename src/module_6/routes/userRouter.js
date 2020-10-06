@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { userController } from '../controllers/userController';
 import { createUserValidator, editUserValidator, autoSuggestUsersValidator } from '../validators/userValidator';
+import { checkToken } from '../token';
 
 class UserRouter {
     constructor(router, userController) {
@@ -16,15 +17,15 @@ class UserRouter {
 
     setupRouter() {
         this.router.route('/')
-            .get(userController.getAllUsers.bind(this.userController));
+            .get(checkToken, userController.getAllUsers.bind(this.userController));
         this.router.route('/create')
-            .post(createUserValidator, userController.createUser.bind(this.userController));
+            .post(checkToken, createUserValidator, userController.createUser.bind(this.userController));
         this.router.route('/:userId')
-            .get(userController.getUserById.bind(this.userController))
-            .put(editUserValidator, userController.editUserById.bind(this.userController))
-            .delete(userController.deleteUserById.bind(this.userController));
+            .get(checkToken, userController.getUserById.bind(this.userController))
+            .put(checkToken, editUserValidator, userController.editUserById.bind(this.userController))
+            .delete(checkToken, userController.deleteUserById.bind(this.userController));
         this.router.route('/auto-suggest')
-            .post(autoSuggestUsersValidator, userController.autoSuggestUsers.bind(this.userController));
+            .post(checkToken, autoSuggestUsersValidator, userController.autoSuggestUsers.bind(this.userController));
     }
 }
 

@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { userGroupController } from '../controllers/userGroupController';
+import { checkToken } from '../token';
 
 class UserGroupRouter {
     constructor(router, userGroupController) {

@@ -1,18 +1,19 @@
 import { logInfo, logError } from '../log';
+import getUUID from '../../utils/getUUID';
 
-const admins = [{ userName: 'admin', password: 'admin', }];
+const admins = [{ id: getUUID(), username: 'admin', password: 'admin', }];
 
 class AuthenticateService {
-    async login({ userName, password, }) {
-        logInfo('AuthenticateService.login', arguments);
+    async getAdmin({ username, password, }) {
+        logInfo('AuthenticateService.getAdmin', arguments);
 
         try {
-            const admin = admins.find((admin) => admin.userName === userName && admin.password === password);
+            const admin = admins.find((admin) => admin.username === username && admin.password === password);
     
-            return users;
+            return admin;
         }
         catch (error) {
-            logError('AuthenticateService.login', 500, arguments);
+            logError('AuthenticateService.getAdmin', 500, arguments);
             
             throw error;
         }

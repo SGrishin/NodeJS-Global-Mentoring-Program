@@ -43,7 +43,7 @@ class UserController {
             if (!user) {
                 logError('UserController.getUserById', 404, [req.params.userId]);
 
-                return res.status(404).json({ message: `User with id ${req.params.userId} not found` });
+                return res.status(404).json({ message: `User with id ${req.params.userId} was not found.` });
             }
 
             return res.json(user);
@@ -62,7 +62,7 @@ class UserController {
             if (!user) {
                 logError('UserController.editUserById', 404, [req.params.userId, req.body]);
 
-                return res.status(404).json({ message: `User with id ${req.params.userId} not found` });
+                return res.status(404).json({ message: `User with id ${req.params.userId} was not found.` });
             }
 
             return res.json(user);
@@ -81,7 +81,7 @@ class UserController {
             if (!user) {
                 logError('UserController.deleteUserById', 404, [req.params.userId]);
 
-                return res.status(404).json({ message: `User with id ${req.params.userId} not found` });
+                return res.status(404).json({ message: `User with id ${req.params.userId} was not found.` });
             }
 
             return res.json(user);

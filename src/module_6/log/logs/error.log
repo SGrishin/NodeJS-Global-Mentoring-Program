@@ -7,3 +7,8 @@
 {"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 22:00:55"}
 {"level":"error","message":"UserService.getAllUsers 500 []","timestamp":"2020-10-06 22:01:15"}
 {"level":"error","message":"Unhandled Rejection {\"code\":\"ERR_HTTP_HEADERS_SENT\"}","timestamp":"2020-10-06 22:03:05"}
+{"level":"error","message":"checkToken 403 No token provided. [\"G\",\"E\",\"T\",\" \",\"/\"]","timestamp":"2020-10-06 23:01:27"}
+{"level":"error","message":"checkToken 403 No token provided. [\"G\",\"E\",\"T\",\" \",\"/\"]","timestamp":"2020-10-06 23:02:00"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:02:59"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:03:59"}
+{"level":"error","message":"checkToken 403 No token provided. [\"GET /api/v1/user\"]","timestamp":"2020-10-06 23:04:34"}

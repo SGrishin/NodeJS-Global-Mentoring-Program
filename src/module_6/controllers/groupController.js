@@ -41,7 +41,7 @@ class GroupController {
             if (!group) {
                 logError('GroupController.getGroupById', 404, [req.params.userId]);
 
-                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} was not found.` });
             }
 
             return res.json(group);
@@ -60,7 +60,7 @@ class GroupController {
             if (!group) {
                 logError('GroupController.editGroupById', 404, [req.params.groupId, req.body]);
 
-                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} was not found.` });
             }
 
             return res.json(group);
@@ -79,7 +79,7 @@ class GroupController {
             if (!group) {
                 logError('GroupController.deleteGroupById', 404, [req.params.groupId]);
 
-                return res.status(404).json({ message: `Group with id ${req.params.groupId} not found` });
+                return res.status(404).json({ message: `Group with id ${req.params.groupId} was not found.` });
             }
 
             return res.json(group);
