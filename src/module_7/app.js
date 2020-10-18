@@ -1,8 +1,9 @@
 import express from 'express';
-import { PORT } from './config';
 import { loaders } from './loaders';
 import { runSequelize } from './db/Sequelize/initSequelize';
 import { logger, uncaughtExceptionHandler, unhandledRejectionHandler } from './log';
+
+require('dotenv').config();
 
 const startServer = () => {
     const app = express();
@@ -14,8 +15,8 @@ const startServer = () => {
 
     runSequelize();
 
-    app.listen(PORT, () => {
-        logger.info(`listening port ${PORT}`);
+    app.listen(process.env.PORT, () => {
+        logger.info(`listening port ${process.env.PORT}`);
     });
 };
 
