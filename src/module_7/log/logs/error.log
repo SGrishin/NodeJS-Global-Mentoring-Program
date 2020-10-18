@@ -12,6 +12,3 @@
 {"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:02:59"}
 {"level":"error","message":"checkToken 403 No token provided. [\"GET /\"]","timestamp":"2020-10-06 23:03:59"}
 {"level":"error","message":"checkToken 403 No token provided. [\"GET /api/v1/user\"]","timestamp":"2020-10-06 23:04:34"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:54:39"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:55:17"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:55:43"}

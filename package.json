@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "module_1:task1": "nodemon --exec babel-node ./src/module_1/task1.js",
     "module_1:task2": "nodemon --exec babel-node ./src/module_1/task2.js",
     "module_2": "nodemon --exec babel-node ./src/module_2/app.js",
     "module_3": "nodemon --exec babel-node ./src/module_3/app.js",
     "module_4": "nodemon --exec babel-node ./src/module_4/app.js",
     "module_5": "nodemon --exec babel-node ./src/module_5/app.js",
-    "module_6": "nodemon --exec babel-node ./src/module_6/app.js"
+    "module_6": "nodemon --exec babel-node ./src/module_6/app.js",
+    "module_7": "nodemon --exec babel-node ./src/module_7/app.js"
   },
   "repository": {
     "type": "git",
@@ -27,13 +28,16 @@
     "@babel/core": "^7.11.1",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
+    "jest": "^26.5.3",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "babel-jest": "^26.5.2",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-joi-validation": "^4.0.4-beta.0",
     "joi": "^17.2.0",

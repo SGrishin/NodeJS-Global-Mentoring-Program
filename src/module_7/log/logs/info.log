@@ -277,11 +277,3 @@
 {"level":"info","message":"After creating user_groups table","timestamp":"2020-10-06 23:04:34"}
 {"level":"info","message":"GET /api/v1/user","timestamp":"2020-10-06 23:04:34"}
 {"level":"error","message":"checkToken 403 No token provided. [\"GET /api/v1/user\"]","timestamp":"2020-10-06 23:04:34"}
-{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-14 18:36:52"}
-{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-14 18:42:03"}
-{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-14 18:42:30"}
-{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-14 18:43:05"}
-{"level":"info","message":"UserController.getAllUsers []","timestamp":"2020-10-14 18:46:05"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:54:39"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:55:17"}
-{"level":"error","message":"UserController.getUserById 404 [\"noUserId\"]","timestamp":"2020-10-17 15:55:43"}
